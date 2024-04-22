@@ -14,12 +14,12 @@
   --title-color: #ffc2e6;
   --subtitle-color: #353430;
   --intermediate-title-color: #353430;
-  --accent-color: #FF8DCB; 
+  --accent-color: #FF8DCB;
   --decorated-accent-color: #353430;
   --header-shadow-color: #FF8DCB;
   --general-text-color: #353430;
   --button-outline-hover-color: #32312D66;
-  --bg-image: url(../images/cover-image-light.png);  
+  --bg-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light .header__recbutton {
@@ -38,12 +38,12 @@
     --title-color: #ffc2e6;
     --subtitle-color: #353430;
     --intermediate-title-color: #353430;
-    --accent-color: #FF8DCB; 
+    --accent-color: #FF8DCB;
     --decorated-accent-color: #353430;
     --header-shadow-color: #FF8DCB;
     --general-text-color: #353430;
     --button-outline-hover-color: #32312D66;
-    --bg-image: url(../images/cover-image-light.png);  
+    --bg-image: url(../images/cover-image-light.png);
   }
 
   @media (width >= 1024px) {

@@ -84,7 +84,7 @@
 
 .header__theme-menu-list {
   display: grid;
-  gap: 10px;  
+  gap: 10px;
 }
 
 @media screen and (width >= 1024px) {
