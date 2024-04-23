@@ -30,25 +30,25 @@
 }
 
 .decorated-zone::before, .decorated-zone::after {
-  content: ""; 
-  position: absolute; 
-  inline-size: 25px; 
-  block-size: 25px; 
-  background-color: transparent; 
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
 }
 
 .decorated-zone::before {
-  inset-block-end: var(--padding); 
-  inset-inline-start: var(--padding); 
-  border-inline-start: 1px solid var(--decorated-accent-color); 
-  border-block-end: 1px solid var(--decorated-accent-color); 
+  inset-block-end: var(--padding);
+  inset-inline-start: var(--padding);
+  border-inline-start: 1px solid var(--decorated-accent-color);
+  border-block-end: 1px solid var(--decorated-accent-color);
 }
 
 .decorated-zone::after {
-  inset-block-start: var(--padding); 
-  inset-inline-end: var(--padding); 
-  border-block-start: 1px solid var(--decorated-accent-color); 
-  border-inline-end: 1px solid var(--decorated-accent-color); 
+  inset-block-start: var(--padding);
+  inset-inline-end: var(--padding);
+  border-block-start: 1px solid var(--decorated-accent-color);
+  border-inline-end: 1px solid var(--decorated-accent-color);
 }
 
 .header__recbutton {
