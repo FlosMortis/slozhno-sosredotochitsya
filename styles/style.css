@@ -13,6 +13,7 @@
   font-size: var(--font-size);
   inline-size: 100%;
   min-block-size: 100vh;
+  line-height: 1.462rem;
 }
 
 .header {
@@ -28,28 +29,26 @@
   position: relative;
 }
 
+.decorated-zone::before, .decorated-zone::after {
+  content: ""; 
+  position: absolute; 
+  inline-size: 25px; 
+  block-size: 25px; 
+  background-color: transparent; 
+}
+
 .decorated-zone::before {
-  content: "";
-  position: absolute;
-  inset-block-end: var(--padding);
-  inset-inline-start: var(--padding);
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-inline-start: 1px solid var(--decorated-accent-color);
-  border-block-end: 1px solid var(--decorated-accent-color);
+  inset-block-end: var(--padding); 
+  inset-inline-start: var(--padding); 
+  border-inline-start: 1px solid var(--decorated-accent-color); 
+  border-block-end: 1px solid var(--decorated-accent-color); 
 }
 
 .decorated-zone::after {
-  content: "";
-  position: absolute;
-  inset-block-start: var(--padding);
-  inset-inline-end: var(--padding);
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-block-start: 1px solid var(--decorated-accent-color);
-  border-inline-end: 1px solid var(--decorated-accent-color);
+  inset-block-start: var(--padding); 
+  inset-inline-end: var(--padding); 
+  border-block-start: 1px solid var(--decorated-accent-color); 
+  border-inline-end: 1px solid var(--decorated-accent-color); 
 }
 
 .header__recbutton {
@@ -109,7 +108,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--button-outline-hover-color);
+  box-shadow: 0 0 0 1px var(--button-outline-hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -117,21 +116,28 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--decorated-accent-color);
+  box-shadow: 0 1px 0 0 var(--decorated-accent-color);
 }
 
-.header__title {
+.main__title {
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  line-height: 5.981rem;
-  text-shadow: 4px 4px 0 var(--header-shadow-color);
+  line-height: clamp(5.98125rem, 5.7844rem + 0.8397vw, 6.1875rem);
+  text-shadow: 4px 4px 0 var(--main-title-shadow-color);
+  
+}
+
+@media screen and (width >= 768px) {
+  .main__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: clamp(6.1875rem, 0.4631rem + 11.9258vw, 8.095625rem);
+  }
 }
 
 @media screen and (width >= 768px) {
   .header__title {
     margin-inline-start: -20px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -191,6 +197,9 @@
 
 .content__section-title {
   color: var(--intermediate-title-color);
+}
+
+.content-title {
   font-weight: 700;
   font-size: var(--font-size);
 }
@@ -211,14 +220,14 @@
   gap: 20px;
 }
 
-.content__section-card {
+.content__section-card-list-item:has(.content__section-card-subtitle) {
   display: grid;
   gap: 10px;
 }
 
-.content__section-card-title {
-  font-weight: 700;
-  font-size: var(--font-size);
+.content__section-card {
+  display: grid;
+  gap: 10px;
 }
 
 .content__section-card-subtitle {
@@ -229,32 +238,26 @@
   gap: 20px;
 }
 
-a {
+.content__section-link {
   text-shadow: 2px 1px 0 var(--accent-color);
   text-decoration: none;
 }
 
-a:hover {
+.content__section-link:hover {
   border-block-end: 1px solid var(--general-text-color);
 }
 
-a:focus {
+.content__section-link:focus {
   outline: none;
 }
 
-a:focus-visible {
+.content__section-link:focus-visible {
   outline: 1px solid var(--general-text-color);
 }
-
 
 .content__gallery {
   display: grid;
   gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
-}
-
-.content__gallery-title {
-  font-weight: 700;
-  font-size: var(--font-size);
 }
 
 .content__gallery-figure-list {
@@ -317,17 +320,3 @@ a:focus-visible {
   padding: var(--padding);
 } 
 
-.footer__title {
-  color: var(--title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: 700;
-  line-height: 5.981rem;
-  text-shadow: 4px 4px 0 var(--accent-color);
-  
-}
-
-@media screen and (width >= 768px) {
-  .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-}
